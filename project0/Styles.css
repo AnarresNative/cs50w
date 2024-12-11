@@ -1,0 +1,68 @@
+body{
+    background-color: #1f1f1f;
+    font-family: Arial, sans-serif;
+}
+#content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - var(--ntp-one-google-bar-height));
+    min-width: fit-content;
+    padding-top: 30px;
+    position: relative;
+    z-index: 1;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+/* Style for the button links as in original code */
+.buttonlink {
+    background-color: #007bff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: azure;
+}
+.buttonlink:hover {
+    background-color: #0056b3;
+    cursor: pointer;
+}
+.button-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Make each row use a two-column flex layout */
+.form-row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+/* Fixed width for label column */
+.form-label {
+    width: 200px;        /* Adjust as needed */
+    text-align: right;   /* Optional: align text to the right */
+    padding-right: 10px; /* Space between label and input */
+    color: #dee2e6;
+}
+
+/* Fixed width for the input so it doesn't move */
+.form-input input {
+    width: 200px;         /* Fixed width for inputs */
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+/* Center the form if desired */
+#advanced_search_form {
+    margin: 0 auto;
+    display: block; /* Not strictly necessary, but clarifies layout */
+}
+
+.submit_search{
+    border-radius: 5px;
+}

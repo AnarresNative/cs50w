@@ -9,8 +9,13 @@ def index(request):
     })
 
 def get_entry(request, title):
-    return render(request, "encyclopedia/layout.html", {
-        "title": title,
-        "markdown": util.get_entry(title)
-    })
+    if util.get_entry(title) is not None:
+        return render(request, "encyclopedia/entry.html", {
+            "title": title,
+            "markdown": util.get_entry(title)
+        })
+    else:
+        return render(request, "encyclopedia/missing_entry.html", {
+            "title": title
+        })
 
